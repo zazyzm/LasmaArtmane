@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col col-md-6">
+            <div class="centered">
+                <img class="about" src="{{ picture.picture.url }}" alt="{{ picture.name }}">
+            </div>
+        </div>
+        <div class="col col-md-6">
+            <div class="centered">
+                <h4>{{ picture.text | safe }}</h4>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container">
+    <p class="gallery-name">{{ gallery.name }}</p>
+    <p class="gallery-description">{{ gallery.text }}</p>
+    <div class="main-container">
+        {% for picture in pictures %}
+            {% if picture.width > 500 and picture.height < 500%}
+                  <div class="gallery-container w-2 h-2">
+            {% elif picture.width < 500 and picture.height > 500%}
+                  <div class="gallery-container w-1 h-2">
+            {% elif picture.width < 500 and picture.height > 1200%}
+                  <div class="gallery-container w-1 h-3">
+            {% elif picture.width > 500 and picture.height > 500%}
+                  <div class="gallery-container w-2 h-2">
+            {% elif picture.width > 500 and picture.height > 1200%}
+                  <div class="gallery-container w-2 h-3">
+            {% else %}
+                  <div class="gallery-container w-1 h-2">
+             {% endif %}
+                <div class="gallery-item">
+                    <div class="image">
+                        <a href="{{ picture.picture.url }}" target="_blank">
+                        <img src="{{ picture.picture.url }}" alt="{{ picture.name }}">
+                        </a>
+                    </div>
+                    <div class="text">
+                        <h4>{{ picture.name }}</h4>
+                        <h5>{{ picture.text }}</h5>
+                    </div>
+                </div>
+              </div>
+
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

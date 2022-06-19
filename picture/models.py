@@ -16,11 +16,12 @@ class Picture(models.Model):  # Need to install Pillow
                             unique=True)
     picture = models.ImageField(upload_to='pictures/%Y/%m/%d/')
     #picture = models.ImageField(upload_to='pictures/%Y/%m/%d/', height_field='height', width_field='width')
-    text = models.TextField('Add a description if you wish', blank=True)
+    text = models.TextField('Add a description', blank=True)
     gallery = models.ForeignKey(Gallery,
                                 on_delete=models.CASCADE,
                                 verbose_name="The related gallery")
-    is_active = models.BooleanField(default=True)
+    is_blog = models.BooleanField('Is it a blog?', default=False)
+    is_active = models.BooleanField('Would you like to show it?', default=True)
     #type = models.CharField(max_length=1, choices=TYPE_CHOICES)
     date = models.DateTimeField(auto_now_add=True)
 

@@ -60,6 +60,10 @@ a.name {
     letter-spacing: 0.1em;
     text-align: left;
 }
+a.no_style{
+color: #FFFFFF;
+text-decoration: none;
+}
 
 .centered {
     display: flex;
@@ -116,7 +120,8 @@ font-size: 2em;
 /* Picture styling */
 
 img.homePic {
-    border-radius: 10%;
+    border-radius: 0%;
+    width: 100%;
 }
 img.gallery {
     width: 300px;

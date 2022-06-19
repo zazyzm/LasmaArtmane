@@ -3,7 +3,7 @@ from .models import Picture
 
 
 class PictureAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name', 'text', 'gallery', 'is_active')
+    list_display = ('id', 'name', 'gallery', 'is_active')
     list_filter = ('name', 'gallery', 'is_active',)
     list_editable = ('is_active',)
     search_fields = ('name', 'gallery', 'is_active')

@@ -5,18 +5,19 @@
     {% for blog in blogs %}
     <div class="row">
         <div class="col col-md-6">
-            <div class="centered">
+            <div class="img-hover-zoom ">
                 <a href="{% url 'picture' blog.id %}">
                 <img class="about" src="{{ blog.picture.url }}" alt="{{ blog.name }}">
                 </a>
             </div>
+            <p>&nbsp;</p>
         </div>
         <div class="col col-md-6">
             <div class="centered">
                 <a class="no_style" href="{% url 'picture' blog.id %}">
                 <h1>{{ blog.name }}</h1>
                 <h5>{{ blog.date }}</h5>
-                <h4>{{ blog.text | safe | truncatewords:100 }}</h4>
+                <h4>{{ blog.text | safe | truncatewords:50 }}</h4>
                 </a>
             </div>
         </div>

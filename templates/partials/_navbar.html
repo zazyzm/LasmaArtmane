@@ -1,10 +1,11 @@
 {% load static %}
 <div class="nav centered">
-        <a class="name" href="/">LASMA ARTMANE</a>
+
     <nav class="site-nav">
     {% for section, galleries in sections.items %}
         <div class="dropdown">
-          <button class="tablinks dropbtn">{{ section }}</button>
+          <button class="tablinks dropbtn">{{ section }}
+          </button>
                 {% if galleries %}
                 <div class="dropdown-content">
                     {% for gallery in galleries %}

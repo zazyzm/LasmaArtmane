@@ -1,7 +1,12 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<div class="homePic centered">
+<div class="homePic centered delay">
     <img class="homePic centered" src="{{ main_pic.picture.url }}" alt="Boat">
 </div>
+<script>
+const name = document.querySelector('.name');
+name.classList.add('delay');
+</script>
+
 {% endblock %}

@@ -8,8 +8,7 @@
 
             {% if galleries|length == 1 %}
             {% for gallery in galleries %}
-            <a class="single" href="{% url 'gallery' gallery %}">{{ section
-                }}</a>
+            <a class="single" href="{% url 'gallery' gallery %}">{{ section }}</a>
             {% endfor %}
 
             {% elif galleries|length > 1 %}

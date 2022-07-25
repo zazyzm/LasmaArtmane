@@ -2,18 +2,28 @@
 <div class="nav centered">
 
     <nav class="site-nav">
-    {% for section, galleries in sections.items %}
+        {% for section, galleries in sections.items %}
+
         <div class="dropdown">
-          <button class="tablinks dropbtn">{{ section }}
-          </button>
-                {% if galleries %}
-                <div class="dropdown-content">
-                    {% for gallery in galleries %}
-                    <a href="{% url 'gallery' gallery %}">{{ gallery }}</a>
-                    {% endfor %}
-                </div>
-                {% endif %}
+
+            {% if galleries|length == 1 %}
+            {% for gallery in galleries %}
+            <a class="single" href="{% url 'gallery' gallery %}">{{ section
+                }}</a>
+            {% endfor %}
+
+            {% elif galleries|length > 1 %}
+            <button class="tablinks dropbtn">{{ section }}
+            </button>
+            {% if galleries %}
+            <div class="dropdown-content">
+                {% for gallery in galleries %}
+                <a href="{% url 'gallery' gallery %}">{{ gallery }}</a>
+                {% endfor %}
+            </div>
+            {% endif %}
+            {% endif %}
         </div>
-    {% endfor %}
-        </nav>
+        {% endfor %}
+    </nav>
 </div>

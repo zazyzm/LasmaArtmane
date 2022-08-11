@@ -417,16 +417,16 @@ top:50%;
 
 /*grid gallery style END*/
 
-@media screen and (max-width:780px){
+@media screen and (max-width:800px){
     .container{
     grid-template-columns: repeat(1,1fr)
     }
     .w-1,.w-2,.w-3,.w-4,.w-5,.w-6{
-        grid-column:span 4;
+        grid-column:span 8;
     }
 }
 
-@media only screen and (max-width:780px){
+@media only screen and (max-width:800px){
     nav.site-nav{
     width: 100%;
     border: 1px solid white;
@@ -435,15 +435,4 @@ top:50%;
     .col-md-6 {
     width: 100%
 }
-/*
-    .container {
-    padding-left: 20px;
-    padding-right: 20px;
-    }
-    .content-area {
-    padding-top: 20px;
-    }
-    .hide-small {
-    display-none;
-    }*/
 }

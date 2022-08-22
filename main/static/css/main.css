@@ -431,6 +431,9 @@ top:50%;
     width: 100%;
     border: 1px solid white;
     }
+    img.about {
+    width: 100%;
+}
 
     .col-md-6 {
     width: 100%

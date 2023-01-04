@@ -8,6 +8,12 @@ from gallery.models import Gallery
 
 def gallery(request, gallery_name):
     pictures_for_gallery = Picture.objects.filter(gallery__name=gallery_name)
+    if not pictures_for_gallery:
+        context = {
+            'sections': navigation_sections(),
+        }
+        return render(request, 'pages/no_gallery.html', context)
+
     if pictures_for_gallery[0].is_blog:
         context = {
             'sections': navigation_sections(),

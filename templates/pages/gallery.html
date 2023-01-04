@@ -5,15 +5,19 @@
 <div class="container">
     <p class="gallery-name">{{ gallery.name }}</p>
     <p class="gallery-description">{{ gallery.text }}</p>
-    <section id="photos">
+    <div id="photos">
         {% for picture in pictures %}
-        <div class="img-hover-zoom">
-            <img src="{{ picture.picture.url }}"
-                 alt="{{ picture.name }}">
+        <div class="image-hover">
+            <div class="image-it">
+                <img src="{{ picture.picture.url }}"
+                     alt="{{ picture.name }}">
+            </div>
+            <div class="image-text">
+                <h4>{{ picture.name }}</h4>
+            </div>
         </div>
         {% endfor %}
-    </section>
-</div>
+    </div>
 </div>
 
 {% endblock %}

@@ -9,8 +9,10 @@
         {% for picture in pictures %}
         <div class="image-hover">
             <div class="image-it">
+                <a href="{% url 'picture' picture.id %}">
                 <img src="{{ picture.picture.url }}"
                      alt="{{ picture.name }}">
+                </a>
             </div>
             <div class="image-text">
                 <h4>{{ picture.name }}</h4>

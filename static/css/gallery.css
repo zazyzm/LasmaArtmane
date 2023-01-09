@@ -1,7 +1,4 @@
 #photos {
-   /* Prevent vertical gaps */
-   line-height: 0;
-
    -webkit-column-count: 4;
    -webkit-column-gap:   20px;
    -moz-column-count:    4;
@@ -15,7 +12,8 @@
   /* Just in case there are inline attributes */
   width: 100% !important;
   height: auto !important;
-  margin: 10px;
+  padding: 0 0 10px 0;
+  display: block;
 }
 
 .image-hover {

@@ -7,7 +7,7 @@ from gallery.models import Gallery
 
 
 def gallery(request, gallery_name):
-    pictures_for_gallery = Picture.objects.filter(gallery__name=gallery_name)
+    pictures_for_gallery = Picture.objects.filter(gallery__name=gallery_name).order_by('-date')
     if not pictures_for_gallery:
         context = {
             'sections': navigation_sections(),

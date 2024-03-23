@@ -42,19 +42,20 @@ left:50%;
 transform: translate(-50%,-50%);
 color:white;
 font-size:18px;
-font-family:"Gill Sans";
+font-family:"Gill Sans", sans-serif;
 pointer-events:none;
 z-index:4;
 transition: .3 ease-in-out;
-/*-webkit-backdrop-filter: blur(5px) saturate(1.8);
-backdrop-filter: blur(5px) saturate(1.8);*/
+-webkit-backdrop-filter: blur(5px) saturate(1.8);
+backdrop-filter: blur(5px) saturate(1.8);
 }
 
 .image-hover:hover .image-text{
 opacity:1;
-font-family:"Gill Sans";
-/*animation: move-down .3s linear;
-padding:3em;*/
+font-family:"Gill Sans", sans-serif;
+animation: move-down .3s linear;
+  padding-top: 250px;
+  padding-bottom: 250px;
 length:100%;
 width:100%;
 
